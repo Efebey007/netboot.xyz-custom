@@ -8,7 +8,7 @@ clear choice
 menu WindowsNetboot
 item --gap Windows PEs
 item option_one ${space} Boot into AOMEI Partition Assistant PE
-item option_one ${space} Boot into Windows Netboot PE
+item option_two ${space} Boot into Windows Netboot PE
 item --gap Other Custom PEs (not ready yet.)
 choose choice || goto exit
 echo ${cls}
