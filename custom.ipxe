@@ -1,7 +1,6 @@
 #!ipxe
 ###
-### made by rtedpro-cpu
-### collaborator Efebey007
+### made by Efebey007
 ###
 
 :custom
@@ -19,11 +18,11 @@ goto exit
 :option_one
 imgfree
 kernel http://boot.netboot.xyz/wimboot
-initrd -n bootmgr     https://micro.cruizernw.com.tr/win-recovery/x64/bootmgr       bootmgr ||
-initrd -n bootmgr.efi https://micro.cruizernw.com.tr/win-recovery/x64/bootmgr.efi   bootmgr.efi ||      
-initrd -n bcd         https://micro.cruizernw.com.tr/win-recovery/x64/boot/BCD      bcd ||
-initrd -n boot.sdi    https://micro.cruizernw.com.tr/win-recovery/x64/boot/boot.sdi boot.sdi ||
-initrd -n boot.wim    https://micro.cruizernw.com.tr/win-recovery/x64/sources/boot.wim boot.wim
+initrd -n bootmgr     http://161.97.166.249/win-recovery/x64/bootmgr       bootmgr ||
+initrd -n bootmgr.efi http://161.97.166.249/win-recovery/x64/bootmgr.efi   bootmgr.efi ||      
+initrd -n bcd         http://161.97.166.249/win-recovery/x64/boot/BCD      bcd ||
+initrd -n boot.sdi    http://161.97.166.249/win-recovery/x64/boot/boot.sdi boot.sdi ||
+initrd -n boot.wim    http://161.97.166.249/win-recovery/x64/sources/boot.wim boot.wim
 boot || goto exit
 
 :option_two
