@@ -22,6 +22,7 @@ initrd -n bootmgr     http://161.97.166.249/win-recovery/x64/bootmgr       bootm
 initrd -n bootmgr.efi http://161.97.166.249/win-recovery/x64/bootmgr.efi   bootmgr.efi ||      
 initrd -n bcd         http://161.97.166.249/win-recovery/x64/boot/BCD      bcd ||
 initrd -n boot.sdi    http://161.97.166.249/win-recovery/x64/boot/boot.sdi boot.sdi ||
+initrd -n BOOTX64.EFI http://161.97.166.249/win-recovery/x64/EFI/Boot/bootx64.efi  BOOTX64.EFI || 
 initrd -n boot.wim    http://161.97.166.249/win-recovery/x64/sources/boot.wim boot.wim
 boot || goto exit
 
