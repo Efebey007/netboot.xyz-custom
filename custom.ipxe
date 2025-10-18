@@ -31,7 +31,6 @@ imgfree
 kernel http://boot.netboot.xyz/wimboot
 initrd -n bootmgr  https://github.com/Efebey007/netboot.xyz-custom/raw/refs/heads/main/bootfiles/bootmgr      bootmgr ||
 initrd -n bootmgr.efi  https://github.com/Efebey007/netboot.xyz-custom/raw/refs/heads/main/bootfiles/bootmgr.efi   bootmgr.efi ||   
-initrd -n bootmgfw.efi https://github.com/Efebey007/netboot.xyz-custom/raw/refs/heads/main/bootfiles/bootmgfw.efi bootmgfw.efi ||
 initrd -n bcd  https://github.com/Efebey007/netboot.xyz-custom/raw/refs/heads/main/bootfiles/bcd      bcd ||
 initrd -n boot.sdi  https://github.com/Efebey007/netboot.xyz-custom/raw/refs/heads/main/bootfiles/boot.sdi boot.sdi || 
 initrd -n boot.wim  https://github.com/Efebey007/netboot.xyz-custom/releases/download/windowsnetboot/boot.wim boot.wim
