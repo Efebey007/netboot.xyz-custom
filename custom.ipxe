@@ -29,18 +29,14 @@ boot || goto exit
 :option_two
 imgfree
 kernel http://boot.netboot.xyz/wimboot
-initrd -n bootmgr     https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/release/hbcd/BOOTMGR       bootmgr ||
-initrd -n bootmgr.efi https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/release/hbcd/bootmgr.efi   bootmgr.efi || 
-initrd -n bcd         https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/release/hbcd/boot/bcd      bcd ||
-initrd -n boot.sdi    https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/release/hbcd/boot/boot.sdi boot.sdi ||
-initrd -n boot.wim    https://github.com/rtedpro-cpu/windowsnetboot/releases/download/hbcd/boot.wim boot.wim
-boot || goto exit
-
-:option_beta
-kernel https://boot.netboot.xyz/memdisk raw iso
-initrd "https://github.com/Efebey2903/files/releases/download/WinNTSetup%26%26AOMEI/PartAssist_WinPE.iso"
+initrd -n bootmgr  <add link>      bootmgr ||
+initrd -n bootmgr.efi  <add link>   bootmgr.efi ||   
+initrd -n bootmgfw.efi <add link> bootmgfw.efi ||
+initrd -n bcd  <add link>      bcd ||
+initrd -n boot.sdi  <add link> boot.sdi || 
+initrd -n boot.wim  <add link> boot.wim
 boot || goto exit
 
 :exit
-chain utils.ipxe
+chain http://boot.netboot.xyz/ipxe/netboot.xyz.efi
 exit
