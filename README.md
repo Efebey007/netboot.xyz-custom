@@ -1,4 +1,4 @@
-# Custom NetBoot Repository...
+# Custom Netboot Images Repository
 This repository is for booting custom images on netboot.xyz!
 
 # How It Works?
