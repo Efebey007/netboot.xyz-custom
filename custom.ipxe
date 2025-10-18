@@ -8,7 +8,7 @@ clear choice
 menu WindowsNetboot
 item --gap Windows PEs
 item option_one ${space} Boot into AOMEI Partition Assistant PE
-item option_one ${space} Boot into Anhdv's Boot PE
+item option_one ${space} Boot into Windows Netboot PE
 item --gap Other Custom PEs (not ready yet.)
 choose choice || goto exit
 echo ${cls}
@@ -18,12 +18,12 @@ goto exit
 :option_one
 imgfree
 kernel http://boot.netboot.xyz/wimboot
-initrd -n bootmgr     http://161.97.166.249/win-recovery/x64/bootmgr       bootmgr ||
-initrd -n bootmgr.efi http://161.97.166.249/win-recovery/x64/bootmgr.efi   bootmgr.efi ||      
-initrd -n bcd         http://161.97.166.249/win-recovery/x64/boot/BCD      bcd ||
-initrd -n boot.sdi    http://161.97.166.249/win-recovery/x64/boot/boot.sdi boot.sdi ||
-initrd -n BOOTX64.EFI http://161.97.166.249/win-recovery/x64/EFI/Boot/bootx64.efi  BOOTX64.EFI || 
-initrd -n boot.wim    http://161.97.166.249/win-recovery/x64/sources/boot.wim boot.wim
+initrd -n bootmgr  http://161.97.166.249/win-recovery/x64/bootmgr       bootmgr ||
+initrd -n bootmgr.efi  http://161.97.166.249/win-recovery/x64/bootmgr.efi   bootmgr.efi ||   
+initrd -n bootmgfw.efi  http://161.97.166.249/win-recovery/x64/bootmgfw.efi  bootmgfw.efi ||
+initrd -n bcd  http://161.97.166.249/win-recovery/x64/boot/BCD      bcd ||
+initrd -n boot.sdi  http://161.97.166.249/win-recovery/x64/boot/boot.sdi boot.sdi || 
+initrd -n boot.wim  http://161.97.166.249/win-recovery/x64/sources/boot.wim boot.wim
 boot || goto exit
 
 :option_two
