@@ -38,5 +38,5 @@ initrd -n boot.wim  https://github.com/Efebey007/netboot.xyz-custom/releases/dow
 boot || goto exit
 
 :exit
-chain http://boot.netboot.xyz/ipxe/netboot.xyz.efi
+chain http://boot.netboot.xyz/ipxe/netboot.xyz.efi // ill fuck myself if it doesnt work.
 exit
