@@ -20,7 +20,7 @@ imgfree
 kernel http://boot.netboot.xyz/wimboot
 initrd -n bootmgr  http://161.97.166.249/win-recovery/x64/bootmgr       bootmgr ||
 initrd -n bootmgr.efi  http://161.97.166.249/win-recovery/x64/bootmgr.efi   bootmgr.efi ||   
-initrd -n bootmgfw.efi  http://161.97.166.249/win-recovery/x64/bootmgfw.efi  bootmgfw.efi ||
+initrd -n bootmgfw.efi https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/betatest/bootmgfw.efi bootmgfw.efi ||
 initrd -n bcd  http://161.97.166.249/win-recovery/x64/boot/BCD      bcd ||
 initrd -n boot.sdi  http://161.97.166.249/win-recovery/x64/boot/boot.sdi boot.sdi || 
 initrd -n boot.wim  http://161.97.166.249/win-recovery/x64/sources/boot.wim boot.wim
@@ -31,7 +31,6 @@ imgfree
 kernel http://boot.netboot.xyz/wimboot
 initrd -n bootmgr     https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/release/hbcd/BOOTMGR       bootmgr ||
 initrd -n bootmgr.efi https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/release/hbcd/bootmgr.efi   bootmgr.efi || 
-initrd -n bootmgfw.efi https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/betatest/bootmgfw.efi   bootmgfw.efi || 
 initrd -n bcd         https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/release/hbcd/boot/bcd      bcd ||
 initrd -n boot.sdi    https://github.com/rtedpro-cpu/windowsnetboot/raw/refs/heads/main/release/hbcd/boot/boot.sdi boot.sdi ||
 initrd -n boot.wim    https://github.com/rtedpro-cpu/windowsnetboot/releases/download/hbcd/boot.wim boot.wim
